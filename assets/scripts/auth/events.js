@@ -31,38 +31,34 @@ const onChangePassword = function (event) {
   api.changePassword(data)
     .then(ui.successChangePassword)
     .then(() => {
-      $("#changeP").text("Successful change!");
+      $("#messagePass").text("Successful change!");
     })
-    .catch((error) => {
-      $("#changeP").text("Nope! Not the right change!");
+    .catch(() => {
+      $("#messagePass").text("Nope! Not the right change!");
     });
 };
 
 const onSignOut = function (event) {
   event.preventDefault();
   api.signOut()
-  .then(() => {
-    delete store.user;
-    return store;
-  })
   .then(ui.successSignOut);
   // .catch(ui.failureSignOut);
 
 };
 const onClean = function(){
   $('.clean-change').val('');
-  $('#changeP').text('');
+  $('#messagePass').text('');
 
 };
 
 const onCleanSignup = function(){
 $('.signup-clean').val('');
-$('.next').text('');
+$('.message').text('');
 };
 const addHandlers = () => {
   $('#sign-up').show();
   $('#sign-in').show();
-  $('.play').hide();
+  $('.container_popovers').hide();
   $('.pass').hide();
   $('#sign-up').on('submit', onSignUp);
   $('#sign-in').on('submit', onSignIn);

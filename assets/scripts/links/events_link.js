@@ -1,8 +1,8 @@
 'use strict';
-// const getFormFields = require(`../../../lib/get-form-fields`);
+const getFormFields = require(`../../../lib/get-form-fields`);
 
-const api_game = require('./api_game');
-const ui_game = require('./ui_game');
+const api_link = require('./api_link');
+const ui_link = require('./ui_link');
 const save = require('../store');
 // let data = getFormFields(event.target);
 

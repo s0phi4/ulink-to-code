@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <!--Home page begins  -->
   <div class="home-page">
     <h1>U-Code</h1>
     <h3>A site for coders to save and organize their online learning resources</h3>
@@ -75,6 +76,38 @@
       </div>
     </div>
   </div>
+<!--Home page ends  -->
+
+<!--Button to change password  -->
+  <button type="button" class="btn btn-primary pass" data-toggle="modal" data-target="#exampleModalChange" data-whatever="@getbootstrap">Change Password!</button>
+  <!--Modal Form to change password modal -->
+      <div class="modal fade" id="exampleModalChange" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <form id="change-password">
+                <fieldset>
+                  <h4 class="modal-title" id="exampleModalLabel">Change Password!</h4>
+                  <label>
+                    Current Password
+                    <input type = "password" name ="passwords[old]" class="clean-change">
+                  </label>
+                  <label>
+                    New Password
+                    <input type ="password" name ="passwords[new]" class="clean-change">
+                  </label>
+                  <input type="submit" class="btn btn-primary cpd" name="submit" value="Change Password!">
+                  <div id = "messagePass"></div>
+                </fieldset>
+              </form>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="clean-in">Close</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
   <!--Sign Out button form-->
   <form id="sign-out">
     <fieldset>
