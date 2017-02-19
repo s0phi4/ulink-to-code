@@ -1,133 +1,191 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Coding Resources!</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Do not add `link` tags unless you know what you are doing -->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
 
-  <body>
-<!-- Buttons to sign up and sign in -->
-  <button type="button" class="btn btn-primary top" data-toggle="modal" data-target="#exampleModalUp" data-whatever="@mdo">Sign Up!</button>
-  <button type="button" class="btn btn-primary top" id="getAll" data-toggle="modal" data-target="#exampleModalIn" data-whatever="@fat">Sign In!</button>
-  <button type="button" class="btn btn-primary pass" data-toggle="modal" data-target="#exampleModalChange" data-whatever="@getbootstrap">Change Password!</button>
-  <!--Modal form to sign Up!  -->
-  <div class="modal fade" id="exampleModalUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <form id="sign-up">
-          <fieldset>
-            <h4 class="modal-title" id="exampleModalLabel">Create an account!</h4>
-            <label>
-              Email
-              <input type = "text" name ="credentials[email]" class="signup-clean">
-            </label>
-            <label>
-              Password
-              <input type ="password" name ="credentials[password]" class="signup-clean">
-            </label>
-            <label>
-              Password Confirmation
-              <input type ="password" name ="credentials[password_confirmation]" class="signup-clean">
-            </label>
-            <input type="submit" class="btn btn-primary su" name="submit" value="Sign up!">
-              <button type="button" class="btn btn-default" data-dismiss="modal" id="clean-signup">Close</button>
-            <div class ="next"></div>
-          </fieldset>
+<head>
+  <title>Coding Resources!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption|PT+Serif" rel="stylesheet">
+</head>
 
-        </form>
-      </div>
+<body>
+  <div class="home-page">
+    <h1>U-Code</h1>
+    <h3>A site for coders to save and organize their online learning resources</h3>
+    <!-- Buttons to sign up and sign in -->
+    <div class="col-md-4 text-center">
+      <button type="button" class="btn btn-primary top" data-toggle="modal" data-target="#exampleModalUp" data-whatever="@mdo">Register!</button>
+      <button type="button" class="btn btn-primary top" id="getAll" data-toggle="modal" data-target="#exampleModalIn" data-whatever="@fat">Sign In!</button>
     </div>
-  </div>
-</div>
-  <!--Modal form to Sign in!  -->
-  <div class="modal fade" id="exampleModalIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <form id="sign-in">
-          <fieldset>
-            <h4 class="modal-title" id="exampleModalLabel">Let's organize our resources!</h4>
-            <label>
-              Email
-              <input type = "text" name ="credentials[email]" class="clean-signin">
-            </label>
-            <label>
-              Password
-              <input type ="password" name ="credentials[password]" class="clean-signin">
-            </label>
-            <input type="submit" class="btn btn-primary signInNow" name="submit" value="Sign In!">
-            <div class ="nextIn"></div>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <!--Modal Form to change password modal -->
-      <div class="modal fade" id="exampleModalChange" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <form id="change-password">
-                <fieldset>
-                  <h4 class="modal-title" id="exampleModalLabel">Change Password!</h4>
-                  <label>
-                    Current Password
-                    <input type = "password" name ="passwords[old]" class="clean-change">
-                  </label>
-                  <label>
-                    New Password
-                    <input type ="password" name ="passwords[new]" class="clean-change">
-                  </label>
-                  <input type="submit" class="btn btn-primary cpd" name="submit" value="Change Password!">
-                  <div id = "changeP"></div>
-                </fieldset>
-              </form>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal" id="clean-in">Close</button>
-            </div>
-            </div>
+    <!--Modal form to sign Up!  -->
+    <div class="modal fade" id="exampleModalUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <form id="sign-up">
+              <fieldset>
+                <h4 class="modal-title" id="exampleModalLabel">Create an account!</h4>
+                <label>
+                  Email
+                  <input type = "text" name ="credentials[email]" class="signup-clean">
+                </label>
+                <label>
+                  Password
+                  <input type ="password" name ="credentials[password]" class="signup-clean">
+                </label>
+                <label>
+                  Password Confirmation
+                  <input type ="password" name ="credentials[password_confirmation]" class="signup-clean">
+                </label>
+                <input type="submit" class="btn btn-primary su" name="submit" value="Register!">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="clean-signup">Close</button>
+                <div class="message"></div>
+              </fieldset>
+            </form>
           </div>
         </div>
       </div>
-
-
-<!--Board and game buttons section -->
-<div class = "container game">
-  <div class ="play">
-    <!--Sign out -->
-    <form id="sign-out">
-      <fieldset>
-    <input type="submit" class="btn btn-danger out" name="submit" value="Sign Out!">
-    </fieldset>
-    </form>
+    </div>
+    <!--Modal form to Sign in!  -->
+    <div class="modal fade" id="exampleModalIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <form id="sign-in">
+              <fieldset>
+                <h4 class="modal-title" id="exampleModalLabel">Let's play!</h4>
+                <label>
+                  Email
+                  <input type = "text" name ="credentials[email]" class="clean-signin">
+                </label>
+                <label>
+                  Password
+                  <input type ="password" name ="credentials[password]" class="clean-signin">
+                </label>
+                <input type="submit" class="btn btn-primary signInNow" name="submit" value="Sign In!">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="clean-signin">Close</button>
+                <div class="message_two"></div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-  <!--Start new game-reset and get game buttons  -->
-  <div class="col-md-6 toPlay">
-          <button class="btn btn-primary hd" id="reset">Start new game!</button>
-          <button class="btn btn-primary hd" id="getGames">Get games played!</button>
-          <h2>Times played!</h2>
+  <!--Sign Out button form-->
+  <form id="sign-out">
+    <fieldset>
+      <input type="submit" class="btn btn-danger btn pull-right" name="submit" value="Sign Out!">
+    </fieldset>
+  </form>
+
+
+  <div class="container_popovers">
+    <div class="row">
+      <div class="col-xs-3">
+        <a href="#" class="btn btn-large btn-primary button_home js" rel="popover" data-content= '<form id="javascript">
+              <fieldset>
+                <label>
+                  Name
+                  <input type = "text" name ="credentials[name]">
+                </label>
+                <label>
+                  URL
+                  <input type ="url" name ="credentials[url]">
+                </label>
+                <label>
+                  Content-type
+                  <input type ="content-type" name ="credentials[content-type]">
+                </label>
+                <input type="submit" class="btn btn-info save-js" name="submit" value="Save">
+                <input type="submit" class="btn btn-danger cancel" name="submit" value="Cancel">
+              </fieldset>
+            </form>' data-placement="bottom" data-original-title="Save your JS links!">JS</a>
+      </div>
+
+      <div class="col-xs-3">
+        <a href="#" class="btn btn-large btn-primary button_home ruby" rel="popover" data-content='<form id="ruby">
+              <fieldset>
+                <label>
+                  Name
+                  <input type = "text" name ="credentials[name]">
+                </label>
+                <label>
+                  URL
+                  <input type ="url" name ="credentials[url]">
+                </label>
+                <label>
+                  Content-type
+                  <input type ="content-type" name ="credentials[content-type]">
+                </label>
+                <input type="submit" class="btn btn-info save-ruby" name="submit" value="Save">
+                <input type="submit" class="btn btn-danger cancel" name="submit" value="Cancel">
+              </fieldset>
+            </form>' data-placement="bottom" data-original-title="Save your Ruby links!">Ruby</a>
+      </div>
+
+      <div class="col-xs-3">
+        <a href="#" class="btn btn-large btn-primary button_home html" rel="popover" data-content='<form id="html">
+              <fieldset>
+                <label>
+                  Name
+                  <input type = "text" name ="credentials[name]">
+                </label>
+                <label>
+                  URL
+                  <input type ="url" name ="credentials[url]">
+                </label>
+                <label>
+                  Content-type
+                  <input type ="content-type" name ="credentials[content-type]">
+                </label>
+                <input type="submit" class="btn btn-info save-html" name="submit" value="Save">
+                <input type="submit" class="btn btn-danger cancel" name="submit" value="Cancel">
+              </fieldset>
+            </form>' data-placement="bottom" data-original-title="Save your HTML links!">HTML</a>
+      </div>
+
+      <div class="col-xs-3">
+        <a href="#" class="btn btn-large btn-primary button_home css" rel="popover" data-content='<form id="css">
+              <fieldset>
+                <label>
+                  Name
+                  <input type = "text" name ="credentials[name]">
+                </label>
+                <label>
+                  URL
+                  <input type ="url" name ="credentials[url]">
+                </label>
+                <label>
+                  Content-type
+                  <input type ="content-type" name ="credentials[content-type]">
+                </label>
+                <input type="submit" class="btn btn-info save-css" name="submit" value="Save">
+                <input type="submit" class="btn btn-danger cancel" name="submit" value="Cancel">
+              </fieldset>
+            </form>' data-placement="bottom" data-original-title="Save your CSS links!">CSS</a>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center go_to_data">
+      <button type="button" class="btn btn-primary ">See your resources!</button>
+    </div>
+
   </div>
   <footer>
-      <p>
-        <a href="https://github.com/yenpraja610" target='_blank'>
-          <h4>See more projects here!</h4>
-        </a>
-        <a href="https://linkedin.com/in/yeniferprajapati" target='_blank'>
-          <h4>Learn more about me!</h4>
-        </a>
-        </p>
-        <p class= "creator">Copyright © Yenifer A. Prajapati. 2017 All Rights Reserved</p>
-    </footer>
-  </body>
+    <p>
+      <a href="https://github.com/yenpraja610" target='_blank'>
+        <h4>See more projects here!</h4>
+      </a>
+      <a href="https://linkedin.com/in/yeniferprajapati" target='_blank'>
+        <h4>Learn more about me!</h4>
+      </a>
+    </p>
+    <p class="creator">Copyright © Yenifer A. Prajapati. 2017 All Rights Reserved</p>
+  </footer>
+</body>
+
 </html>

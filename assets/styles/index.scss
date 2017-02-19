@@ -1,2 +1,38 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+body {
+  background: black;
+  min-height: 520px;
+}
+
+h1 {
+  font-family: 'PT Serif', serif;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+body,
+div,
+h2,
+h3,
+h4 {
+  font-family: 'PT Sans Caption', sans-serif;
+}
+
+.row {
+  margin-top: 50px;
+}
+
+.go_to_data {
+  margin-top: 100px;
+}
+
+.button_home {
+  font-size: 40px;
+  padding: 20px;
+  text-align: center;
+}
