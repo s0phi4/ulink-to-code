@@ -5,7 +5,7 @@ const store = require('../store');
 //get all links
 const getLinks = function () {
   return $.ajax( {
-    url:config.apiOrigin + '/links',
+    url:config.apiOrigin + '/resources',
     method: 'GET',
     headers: {
       Authorization: `Token token=${store.user.token}`,
@@ -15,7 +15,7 @@ const getLinks = function () {
 //create link
 const createLink = function (name, url, tag, content_type) {
   return $.ajax({
-    url: config.apiOrigin + '/links',
+    url: config.apiOrigin + '/resources',
     method: 'POST',
     headers: {
       Authorization: `Token token=${store.user.token}`,
@@ -33,7 +33,7 @@ const createLink = function (name, url, tag, content_type) {
 // Show link
 const showLink = function () {
   return $.ajax({
-    url: config.apiOrigin + '/links/',
+    url: config.apiOrigin + '/resources/',
     method: 'GET',
     headers: {
       Authorization: `Token token=${store.user.token}`,
@@ -43,7 +43,7 @@ const showLink = function () {
 //Update link only name and URL
 const updateLink = function(resourceId,name, url) {
   return $.ajax ({
-    url: `${config.apiOrigin}/links/${store.resourceId}`,
+    url: `${config.apiOrigin}/resources/${store.resourceId}`,
     method: 'PATCH',
     headers: {
       Authorization: `Token token=${store.user.token}`,
@@ -60,7 +60,7 @@ const updateLink = function(resourceId,name, url) {
 // Delete link
 const deleteLink = function(resourceIdDelete) {
   return $.ajax ({
-    url: config.apiOrigin + '/links/' + resourceIdDelete,
+    url: config.apiOrigin + '/resources/' + resourceIdDelete,
     method: 'DELETE',
     headers: {
       Authorization: `Token token=${store.user.token}`,

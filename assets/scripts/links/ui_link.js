@@ -1,19 +1,24 @@
 'use strict';
-
-const successCreateGame = () => {
-  $('#board').show();
-  $('h2').hide();
+const success = (data) => {
+  console.log(data);
 };
+const failure = (error) => {
+  console.log(error);
+};
+
 
 const showUserResources = function(data) {
-let resourceTemplate = require('./templates/user-resource.handlebars');
-$('h2').show();
-$('h2').text('You killed time '+ data.games.length + ' times!');
+let resourceTemplate = require('./templates/user_resource.handlebars');
+$('.resourcesTable').html(resourceTemplate({
+  resources: data.resources
+  }));
 };
+
 
 
 
 module.exports = {
-  showUserResources,
-  successCreateGame,
+  success,
+  failure,
+  showUserResources
 };

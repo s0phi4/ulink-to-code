@@ -3,42 +3,56 @@ const getFormFields = require(`../../../lib/get-form-fields`);
 
 const api_link = require('./api_link');
 const ui_link = require('./ui_link');
+const config = require('../config');
 const save = require('../store');
-// let data = getFormFields(event.target);
 
-const onIndex = function (event) {
+const ongetLinks = function (event) {
   event.preventDefault();
-  api_game.index()
-  .then((response) => {
-    // save.game = response.game;
-    $("#game-results").text("Games " + response.games.length);
-  })
-  .then(ui_game.success);
+  $('.container_popovers').hide();
+  $('.resourcesTable').show();
+  api_link.getLinks()
+  .then(function(resources) {
+    ui_link.showUserResources(resources);
+  });
 };
 
-const onCreateGame = function (event) {
+
+const onCreateLink = function (event) {
+  let resourceTag = $('.js').val();
   event.preventDefault();
-  api_game.createGame()
-  .then ((response) => {
-   save.game = response.game;
- })
- .then(ui_game.successCreateGame);
+  api_link.createLink(name, url, tag, content_type)
+ .then(ui_link.success)
+ .catch(ui_link.failure);
  };
 
-const onShowGame = function (event) {
+const onShowLink = function (event) {
   event.preventDefault();
-  // let id = parseInt($('#game-id').val());
-  api_game.showGame()
-  .then(ui_game.showGamesTotal);
+  api_link.showLink()
+  .then(ui_link.success)
+  .catch(ui_link.failure);
 };
 
-const gameHandlers = function () {
+const onUpdateLink = function (event) {
+   event.preventDefault();
+   api_link.updateLink(resourceId, name, url)
+   .then(ui_link.success)
+   .catch(ui_link.failure);
+};
+
+const onDeleteLink = function(event){
+  let resourceDelete = $('#resourceDelete').val();
+  event.preventDefault();
+  api_link.deleteLink(resourceIdDelete)
+  .then(ui_link.success)
+  .catch(ui_link.failure);
+};
+
+const linkHandlers = function () {
   $('#getGames').on('click', onIndex);
   $('#reset').on('click', onCreateGame);
   $('#getGames').on ('click', onShowGame);
 
 };
 module.exports = {
-  gameHandlers,
+  linkHandlers,
 };
-//
