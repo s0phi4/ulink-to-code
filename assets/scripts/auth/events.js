@@ -60,10 +60,11 @@ const addHandlers = () => {
   $('#sign-in').show();
   $('.container_popovers').hide();
   $('.pass').hide();
+  $('.sign-out').hide();
   $('#sign-up').on('submit', onSignUp);
   $('#sign-in').on('submit', onSignIn);
   $('#change-password').on('submit',onChangePassword);
-  $('#sign-out').on('click',onSignOut);
+  $('.sign-out').on('click',onSignOut);
   $("#clean-in").on('click', onClean);
   $('#clean-signup').on ('click', onCleanSignup);
 

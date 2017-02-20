@@ -25,7 +25,7 @@ const successSignIn = (data) => {
     $('.top').hide();
     $('.bottom-page').hide();
     $('#change-password').show();
-    $('#sign-out').show();
+    $('.sign-out').show();
   };
 
 const failureSignIn = (error) => {
@@ -41,13 +41,18 @@ $('#messagePass').text('Great! Change is successful!');
 const successSignOut = () => {
       $('.container_popovers').hide();
       $('.pass').hide();
+      $('.sign-out').hide();
       $('.home-page').show();
+      $('.bottom-page').show();
 };
 
 const failureSignOut = () => {
       $('.container_popovers').hide();
       $('.pass').hide();
+      $('.sign-out').hide();
       $('.home-page').show();
+      $('.bottom-page').show();
+
 
 };
 
