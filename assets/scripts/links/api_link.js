@@ -13,7 +13,7 @@ const getLinks = function () {
   });
 };
 //create link
-const createLink = function (name, url, tag, content_type) {
+const createLink = function (name, url, tag, contentType) {
   return $.ajax({
     url: config.apiOrigin + '/resources',
     method: 'POST',
@@ -25,7 +25,7 @@ const createLink = function (name, url, tag, content_type) {
         "name": name,
         "url":  url,
         "tag":  tag,
-        "content_type": content_type
+        "contentType": contentType
       }
     },
   });
