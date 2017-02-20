@@ -2,24 +2,24 @@
 <html>
 
 <head>
-  <title>Coding Resources!</title>
+  <title>ULink to Code</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Do not add `link` tags unless you know what you are doing -->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption|PT+Serif" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 
 <body>
-  <!--Home page begins  -->
+  <!--Home Buttons sign up and sign in-->
   <div class="home-page">
-    <h1>ULink to Code</h1>
-    <h3>A site for coders to save and organize their online learning resources!</h3>
     <!-- Buttons to sign up and sign in -->
-    <div class="col-md-4 text-center">
-      <button type="button" class="btn btn-primary top" data-toggle="modal" data-target="#exampleModalUp" data-whatever="@mdo">Register!</button>
-      <button type="button" class="btn btn-primary top" id="getAll" data-toggle="modal" data-target="#exampleModalIn" data-whatever="@fat">Sign In!</button>
+    <div class="col-md-2 text-center">
+      <button type="button" class="btn btn-primary btn pull-left top" data-toggle="modal" data-target="#exampleModalUp" data-whatever="@mdo">Register!</button>
+      <button type="button" class="btn btn-primary btn pull-left top" id="getAll" data-toggle="modal" data-target="#exampleModalIn" data-whatever="@fat">Sign In!</button>
     </div>
     <!--Modal form to sign Up!  -->
     <div class="modal fade" id="exampleModalUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -76,11 +76,14 @@
       </div>
     </div>
   </div>
-<!--Home page ends  -->
+<!--Home buttons end  -->
 
-<!--Button to change password  -->
-  <button type="button" class="btn btn-primary pass" data-toggle="modal" data-target="#exampleModalChange" data-whatever="@getbootstrap">Change Password!</button>
-  <!--Modal Form to change password modal -->
+
+<!--Buttons to change password and sign out -->
+<div class="outChangeButtons">
+  <button type="button" class="btn btn-primary btn pull-right pass" data-toggle="modal" data-target="#exampleModalChange" data-whatever="@getbootstrap">Change Password</button>
+  <button type="button" class="btn btn-danger btn pull-right">Sign Out</button>
+  <!--Modal Form to change password -->
       <div class="modal fade" id="exampleModalChange" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -108,16 +111,10 @@
           </div>
         </div>
       </div>
-  <!--Sign Out button form-->
-  <form id="sign-out">
-    <fieldset>
-      <input type="submit" class="btn btn-danger btn pull-right" name="submit" value="Sign Out!">
-    </fieldset>
-  </form>
+</div>
+<!-- Buttons change and out end -->
 
-  <!--Table with links  -->
-  <div class="resourcesTable"></div>
-
+<!-- Popovers to save resources-->
   <div class="container_popovers">
     <div class="row">
       <div class="col-xs-3">
@@ -204,12 +201,23 @@
             </form>' data-placement="bottom" data-original-title="Save your CSS links!">CSS</a>
       </div>
     </div>
+<!--Popovers end  -->
 
-    <div class="col-md-4 text-center go_to_data">
+<!--button to see resources  -->
+    <div class="col-md-12 text-center go_to_data">
       <button type="button" class="btn btn-primary see_links">See your resources!</button>
     </div>
+<!--Button to see resources end  -->
 
+    <!--Table with links  -->
+    <div class="resourcesTable"></div>
   </div>
+
+  <!--  -->
+  <div class="row bottom">
+    <h1>ULink to Code</h1>
+    <h3>Learn</h3>
+    <h3>Save & Organize</h3>
   <footer>
     <p>
       <a href="https://github.com/yenpraja610" target='_blank'>
@@ -221,6 +229,7 @@
     </p>
     <p class="creator">Copyright © Yenifer A. Prajapati. 2017 All Rights Reserved</p>
   </footer>
+</div>
 </body>
 
 </html>

@@ -1,0 +1,27 @@
+<h1>UCode-My Online Resources!</h1>
+
+{{#each resources as |resource|}}
+<table class="table">
+  <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>URL</th>
+        <th>Content-Type</th>
+        <th>Tag</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{resource.id}}</td>
+        <td>{{resource.name}}</td>
+        <td>{{resource.url}}</td>
+        <td>{{resource.content-type}}</td>
+        <td>{{resource.tag}}</td>
+        <td><i class="material-icons edit">mode_edit</i>
+        <i class="material-icons delete">delete</i></td>
+      </tr>
+
+    </tbody>
+</table>
+{{/each}}

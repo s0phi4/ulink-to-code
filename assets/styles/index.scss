@@ -2,17 +2,31 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 body {
-  background: black;
+  background: #000000;
   min-height: 520px;
+}
+.row {
+  margin-top: 100px;
+}
+
+.button_home {
+  font-size: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  text-align: center;
 }
 
 h1 {
   font-family: 'PT Serif', serif;
-  text-align: center;
+  margin-right: 50px;
+  margin-top: 80px;
+  text-align: right;
 }
 
 h3 {
-  text-align: center;
+  margin-right: 50px;
+  text-align: right;
 }
 
 body,
@@ -23,16 +37,13 @@ h4 {
   font-family: 'PT Sans Caption', sans-serif;
 }
 
-.row {
-  margin-top: 50px;
-}
-
 .go_to_data {
   margin-top: 100px;
 }
 
-.button_home {
-  font-size: 40px;
-  padding: 20px;
-  text-align: center;
+
+
+footer {
+  margin-left: 20px;
+  margin-top: 80px;
 }
