@@ -11,7 +11,8 @@ const onGetLinks = function (event) {
   api_link.getLinks()
   .then(function(resources) {
     ui_link.showUserResources(resources);
-  });
+  })
+  .catch(ui_link.failure);
 };
 
 
@@ -49,6 +50,9 @@ const onDeleteLink = function(event){
 const linkHandlers = function () {
 $('.see_links').on('click', onGetLinks);
 $('.save-js').on('click', onCreateLink);
+$('.save-ruby').on('click', onCreateLink);
+$('.save-html').on('click', onCreateLink);
+$('.save-css').on('click', onCreateLink);
 $('.edit').on('click', onUpdateLink);
 $('.delete').on('click', onDeleteLink);
 

@@ -34,19 +34,14 @@ const createLink = function (data) {
 //   });
 // };
 //Update link only name and URL
-const updateLink = function(resourceId,name, url) {
+const updateLink = function(data) {
   return $.ajax ({
-    url: `${config.apiOrigin}/resources/${store.resourceId}`,
+    url: config.apiOrigin + '/resources/' + data.resource.id,
     method: 'PATCH',
     headers: {
       Authorization: `Token token=${store.user.token}`,
     },
-    data: {
-      "resource": {
-        "name": name,
-        "url":  url,
-      }
-    },
+    data,
   });
 };
 
