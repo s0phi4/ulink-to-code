@@ -1,12 +1,9 @@
 'use strict';
-const getFormFields = require(`../../../lib/get-form-fields`);
-
 const api_link = require('./api_link');
 const ui_link = require('./ui_link');
-const config = require('../config');
-const save = require('../store');
+// const save = require('../store');
 
-const ongetLinks = function (event) {
+const onGetLinks = function (event) {
   event.preventDefault();
   $('.container_popovers').hide();
   $('.resourcesTable').show();
@@ -18,9 +15,9 @@ const ongetLinks = function (event) {
 
 
 const onCreateLink = function (event) {
-  let resourceTag = $('.js').val();
+  // let resourceTag = $('.js').val();
   event.preventDefault();
-  api_link.createLink(name, url, tag, content_type)
+  api_link.createLink()
  .then(ui_link.success)
  .catch(ui_link.failure);
  };
@@ -48,9 +45,8 @@ const onDeleteLink = function(event){
 };
 
 const linkHandlers = function () {
-  $('#getGames').on('click', onIndex);
-  $('#reset').on('click', onCreateGame);
-  $('#getGames').on ('click', onShowGame);
+$('.see_links').on('click', onGetLinks);
+$('.save-js').on('click', onCreateLink);
 
 };
 module.exports = {
