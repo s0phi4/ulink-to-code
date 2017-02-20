@@ -1,18 +1,22 @@
  'use strict';
+ const config = require('../config');
 
-const successSignUp = () => {
+
+const successSignUp = (data) => {
+  config.user = data.user;
   $('#exampleModalUp').modal('hide');
   $('.signup-clean').val('');
   $('.message').text('');
+  console.log(data);
 };
 
-const failureSignUp = (error) => {
-if (error) {
+const failureSignUp = (data) => {
+  console.log(data);
   $('.message').text('Nope, you used this account already, try with a different account!');
-  }
 };
 
-const successSignIn = () => {
+const successSignIn = (data) => {
+    config.user = data.user;
     $('#sign-up').val('');
     $('.clean-signin').val('');
     $('#exampleModalIn').modal('hide');

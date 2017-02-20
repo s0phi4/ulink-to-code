@@ -13,33 +13,26 @@ const getLinks = function () {
   });
 };
 //create link
-const createLink = function (name, url, tag, contentType) {
+const createLink = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/resources',
     method: 'POST',
     headers: {
       Authorization: `Token token=${store.user.token}`,
     },
-    data: {
-      "resource": {
-        "name": name,
-        "url":  url,
-        "tag":  tag,
-        "contentType": contentType
-      }
-    },
+    data,
   });
 };
 // Show link
-const showLink = function () {
-  return $.ajax({
-    url: config.apiOrigin + '/resources/',
-    method: 'GET',
-    headers: {
-      Authorization: `Token token=${store.user.token}`,
-    }
-  });
-};
+// const showLink = function () {
+//   return $.ajax({
+//     url: config.apiOrigin + '/resources/',
+//     method: 'GET',
+//     headers: {
+//       Authorization: `Token token=${store.user.token}`,
+//     }
+//   });
+// };
 //Update link only name and URL
 const updateLink = function(resourceId,name, url) {
   return $.ajax ({
@@ -71,7 +64,7 @@ const deleteLink = function(resourceIdDelete) {
 module.exports = {
   getLinks,
   createLink,
-  showLink,
+  // showLink,
   updateLink,
   deleteLink
 };

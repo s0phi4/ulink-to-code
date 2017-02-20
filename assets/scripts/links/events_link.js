@@ -1,7 +1,8 @@
 'use strict';
+
+const getFormFields = require(`../../../lib/get-form-fields`);
 const api_link = require('./api_link');
 const ui_link = require('./ui_link');
-// const save = require('../store');
 
 const onGetLinks = function (event) {
   event.preventDefault();
@@ -15,9 +16,9 @@ const onGetLinks = function (event) {
 
 
 const onCreateLink = function (event) {
-  // let resourceTag = $('.js').val();
   event.preventDefault();
-  api_link.createLink()
+  let data = getFormFields(event.target);
+  api_link.createLink(data)
  .then(ui_link.success)
  .catch(ui_link.failure);
  };
@@ -31,15 +32,16 @@ const onCreateLink = function (event) {
 
 const onUpdateLink = function (event) {
    event.preventDefault();
-   api_link.updateLink()
+   let data = getFormFields(event.target);
+   api_link.updateLink(data)
    .then(ui_link.success)
    .catch(ui_link.failure);
 };
 
 const onDeleteLink = function(event){
-  // let resourceDelete = $('#resourceDelete').val();
   event.preventDefault();
-  api_link.deleteLink()
+  let data = getFormFields(event.target);
+  api_link.deleteLink(data)
   .then(ui_link.success)
   .catch(ui_link.failure);
 };
