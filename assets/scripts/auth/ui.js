@@ -23,6 +23,7 @@ const successSignIn = (data) => {
     $('.container_popovers').show();
     $('.pass').show();
     $('.top').hide();
+    $('.bottom-page').hide();
     $('#change-password').show();
     $('#sign-out').show();
   };
