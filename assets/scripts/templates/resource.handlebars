@@ -1,6 +1,6 @@
 <h1>UCode-My Online Resources!</h1>
 
-{{#each resources as |resource|}}
+
 <table class="table">
   <thead>
       <tr>
@@ -12,16 +12,16 @@
       </tr>
     </thead>
     <tbody>
+      {{#each resources as |resource|}}
       <tr>
         <td>{{resource.id}}</td>
-        <td>{{resource.name}}</td>
-        <td>{{resource.url}}</td>
+        <td contenteditable="true">{{resource.name}}</td>
+        <td contenteditable="true">{{resource.url}}</td>
         <td>{{resource.content-type}}</td>
         <td>{{resource.tag}}</td>
         <td><i class="material-icons edit">mode_edit</i>
         <i class="material-icons delete">delete</i></td>
       </tr>
-
+      {{/each}}
     </tbody>
 </table>
-{{/each}}

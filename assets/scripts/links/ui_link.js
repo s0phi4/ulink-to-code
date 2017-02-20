@@ -8,7 +8,7 @@ const failure = (error) => {
 
 
 const showUserResources = function(data) {
-let resourceTemplate = require('./templates/user_resource.handlebars');
+let resourceTemplate = require('./templates/resource.handlebars');
 $('.resourcesTable').html(resourceTemplate({
   resources: data.resources
   }));

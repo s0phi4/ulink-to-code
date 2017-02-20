@@ -22,24 +22,24 @@ const onCreateLink = function (event) {
  .catch(ui_link.failure);
  };
 
-const onShowLink = function (event) {
-  event.preventDefault();
-  api_link.showLink()
-  .then(ui_link.success)
-  .catch(ui_link.failure);
-};
+// const onShowLink = function (event) {
+//   event.preventDefault();
+//   api_link.showLink()
+//   .then(ui_link.success)
+//   .catch(ui_link.failure);
+// };
 
 const onUpdateLink = function (event) {
    event.preventDefault();
-   api_link.updateLink(resourceId, name, url)
+   api_link.updateLink()
    .then(ui_link.success)
    .catch(ui_link.failure);
 };
 
 const onDeleteLink = function(event){
-  let resourceDelete = $('#resourceDelete').val();
+  // let resourceDelete = $('#resourceDelete').val();
   event.preventDefault();
-  api_link.deleteLink(resourceIdDelete)
+  api_link.deleteLink()
   .then(ui_link.success)
   .catch(ui_link.failure);
 };
@@ -47,6 +47,8 @@ const onDeleteLink = function(event){
 const linkHandlers = function () {
 $('.see_links').on('click', onGetLinks);
 $('.save-js').on('click', onCreateLink);
+$('.edit').on('click', onUpdateLink);
+$('.delete').on('click', onDeleteLink);
 
 };
 module.exports = {
