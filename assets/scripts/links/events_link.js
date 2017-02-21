@@ -19,6 +19,8 @@ const onGetLinks = function (event) {
 
 
 const onCreateLink = function (event) {
+  event.preventDefault();
+
   let data = getFormFields(event.target);
   console.log(data);
 
@@ -48,7 +50,6 @@ const onUpdateLink = function (event) {
 
 const onDeleteLink = function(event){
   event.preventDefault();
-  console.log("HELLO");
   let id = $(event.target).data('id');
   console.log(id);
   api_link.deleteLink(id)

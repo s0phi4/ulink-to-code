@@ -2,7 +2,6 @@
 //
 const setAPIOrigin = require('../../lib/set-api-origin');
 const config = require('./config');
-// const resourceTemplate = require('../templates/resource.handlebars');
 const authEvents = require('./auth/events.js');
 const resourceEvents = require('./links/events_link.js');
 //
@@ -10,7 +9,6 @@ const resourceEvents = require('./links/events_link.js');
 $(() => {
   setAPIOrigin(location, config);
   authEvents.addHandlers();
-  // resourceTemplate.
   resourceEvents.linkHandlers();
   $('a[rel=popover]').popover({
     html: 'true',
