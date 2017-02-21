@@ -34,9 +34,9 @@ const createLink = function (data) {
 //   });
 // };
 //Update link only name and URL
-const updateLink = function(data) {
+const updateLink = function(data,id) {
   return $.ajax ({
-    url: config.apiOrigin + '/resources/' + data.resource.id,
+    url: config.apiOrigin + '/resources/' + id,
     method: 'PATCH',
     headers: {
       Authorization: `Token token=${store.user.token}`,

@@ -40,11 +40,14 @@ const onUpdateLink = function (event) {
   console.log("HELLO");
    event.preventDefault();
    let data = getFormFields(event.target);
-   api_link.updateLink(data)
+   let id = event.target.getAttribute('data-id');
+   console.log(id);
+   api_link.updateLink(data,id)
    .then(ui_link.success)
-   .then(() => {
-     $("#messageUpdate").text("Name and URL updated!");
-   })
+   .then(onGetLinks)
+  //    $("#messageUpdate").text("Name and URL updated!");
+  //  })
+
    .catch(ui_link.failure);
 };
 
@@ -67,7 +70,7 @@ const onClean = function(){
 const linkHandlers = function () {
 $('.see_links').on('click', onGetLinks);
 $('#javascript').on('submit', onCreateLink);
-$('.resourcesTable').on('submit', '.update-info',onUpdateLink);
+$('.resourcesTable').on('submit','.update-info',onUpdateLink);
 $('.resourcesTable').on('click','.delete_information', onDeleteLink);
 $("#clean-in").on('click', onClean);
 
