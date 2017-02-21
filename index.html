@@ -118,24 +118,29 @@
   <div class="container_popovers">
     <div class="row">
       <div class="col-xs-3">
-        <a href="#" class="btn btn-large btn-primary button_home js" rel="popover" data-content= '<form id="javascript">
+        <!-- <a href="#" class="btn btn-large btn-primary button_home js" rel="popover" data-content= ' -->
+        <form id="javascript">
               <fieldset>
                 <label>
                   Name
-                  <input type = "text" name ="credentials[name]">
+                  <input type = "text" name ="resource[name]">
                 </label>
                 <label>
                   URL
-                  <input type ="url" name ="credentials[url]">
+                  <input type ="url" name ="resource[url]">
+                </label>
+                <label>
+                  Tag
+                  <input type = "text" name ="resource[tag]">
                 </label>
                 <label>
                   Content-type
-                  <input type ="content-type" name ="credentials[content-type]">
+                  <input type ="contentType" name ="resource[content_type]">
                 </label>
-                <input type="submit" class="btn btn-info save save-js" name="submit" value="Save">
-                <input type="submit" class="btn btn-danger cancel" name="submit" value="Cancel">
+                <input type="submit" class="btn btn-info save save-js" name="submit2" value="Save">
               </fieldset>
-            </form>' data-placement="bottom" data-original-title="Save your JS links!">JS</a>
+            </form>
+            <!-- data-placement="bottom" data-original-title="Save your JS links!">JS</a> -->
       </div>
 
       <div class="col-xs-3">

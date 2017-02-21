@@ -19,6 +19,8 @@ const onGetLinks = function (event) {
 const onCreateLink = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
+  console.log(data);
+
   api_link.createLink(data)
  .then(ui_link.success)
  .catch(ui_link.failure);
@@ -49,7 +51,7 @@ const onDeleteLink = function(event){
 
 const linkHandlers = function () {
 $('.see_links').on('click', onGetLinks);
-$('.save-js').on('click', onCreateLink);
+$('#javascript').on('submit', onCreateLink);
 $('.save-ruby').on('click', onCreateLink);
 $('.save-html').on('click', onCreateLink);
 $('.save-css').on('click', onCreateLink);
