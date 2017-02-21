@@ -1,4 +1,7 @@
 'use strict';
+const config = require('../config');
+// const resourceTemplate = require('../templates/resource.handlebars');
+
 
 
 const success = (data) => {
@@ -11,6 +14,10 @@ const failure = (error) => {
 // const successSave = () => {
 //   $('.save').popover('hide');
 // };
+const successChange = (data) => {
+    config.resource = data.resource;
+
+};
 
 const showUserResources = function(data) {
 let resourceTemplate = require('../templates/resource.handlebars');
@@ -25,6 +32,7 @@ $('.resourcesTable').html(resourceTemplate({
 module.exports = {
   success,
   failure,
+  successChange,
   // successSave,
   showUserResources
 };

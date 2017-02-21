@@ -46,9 +46,9 @@ const updateLink = function(data) {
 };
 
 // Delete link
-const deleteLink = function(resourceIdDelete) {
+const deleteLink = function(id) {
   return $.ajax ({
-    url: config.apiOrigin + '/resources/' + resourceIdDelete,
+    url: config.apiOrigin + '/resources/' + id,
     method: 'DELETE',
     headers: {
       Authorization: `Token token=${store.user.token}`,

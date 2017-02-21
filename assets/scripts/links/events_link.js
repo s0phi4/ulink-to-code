@@ -5,7 +5,9 @@ const api_link = require('./api_link');
 const ui_link = require('./ui_link');
 
 const onGetLinks = function (event) {
-  event.preventDefault();
+  if (event) {
+    event.preventDefault();
+  }
   $('.container_popovers').hide();
   $('.resourcesTable').show();
   api_link.getLinks()
@@ -17,7 +19,6 @@ const onGetLinks = function (event) {
 
 
 const onCreateLink = function (event) {
-  event.preventDefault();
   let data = getFormFields(event.target);
   console.log(data);
 
@@ -34,6 +35,7 @@ const onCreateLink = function (event) {
 // };
 
 const onUpdateLink = function (event) {
+  console.log("HELLO");
    event.preventDefault();
    let data = getFormFields(event.target);
    api_link.updateLink(data)
@@ -46,17 +48,27 @@ const onUpdateLink = function (event) {
 
 const onDeleteLink = function(event){
   event.preventDefault();
-  let data = getFormFields(event.target);
-  api_link.deleteLink(data.resource.id)
+  console.log("HELLO");
+  let id = $(event.target).data('id');
+  console.log(id);
+  api_link.deleteLink(id)
   .then(ui_link.success)
+  .then(onGetLinks)
   .catch(ui_link.failure);
+};
+
+const onClean = function(){
+  $('.clean-change').val('');
+  $('#messageUpdate').text('');
+
 };
 
 const linkHandlers = function () {
 $('.see_links').on('click', onGetLinks);
 $('#javascript').on('submit', onCreateLink);
-$('.update-info').on('submit', onUpdateLink);
+$('.resourcesTable').on('submit', '.update-info',onUpdateLink);
 $('.resourcesTable').on('click','.delete_information', onDeleteLink);
+$("#clean-in").on('click', onClean);
 
 };
 module.exports = {

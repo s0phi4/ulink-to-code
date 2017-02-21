@@ -14,24 +14,24 @@
     <tbody>
       {{#each resources as |resource|}}
       <tr>
-        <td>{{resource.id}}</td>
+        <td data-id="{{resource.id}}"</td>
         <td contenteditable="true">{{resource.name}}</td>
         <td contenteditable="true">{{resource.url}}</td>
         <td>{{resource.content_type}}</td>
         <td>{{resource.tag}}</td>
         <td>
-          <button type="button" class="btn btn-danger delete_information">
-            <span class="glyphicon glyphicon-trash"></span>
+          <button data-id="{{resource.id}}" class="btn btn-danger delete_information">
+            <span data-id="{{resource.id}}" class="glyphicon glyphicon-trash"></span>
           </button>
 
           <button type="button" class="btn btn-primary btn pull-right update" data-toggle="modal" data-target="#exampleModalUpdate" data-whatever="@getbootstrap"><span class="glyphicon glyphicon-pencil"></span></button>
-          <div class="modal fade" id="exampleModalUpdate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+          <div class="modal fade" id="exampleModalUpdate-{{resource.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
             <div class="modal-dialog" role="document">
-              <div class="modal-content">
+              <div class="modal-content saveNewLink">
                 <div class="modal-header">
-                  <form id="update-info">
+                  <form data-id="{{resource.id}}" class="update-info">
                     <fieldset>
-                      <h4 class="modal-title" id="exampleModalLabel">Update!</h4>
+                      <h4 class="modal-title" id="exampleModalLabel-{{resource.id}}">Update!</h4>
                       <label>
                           Name
                           <input type = "name" name ="resource[name]" class="clean-change">
@@ -41,12 +41,9 @@
                           <input type ="url" name ="resource[url]" class="clean-change">
                         </label>
                       <input type="submit" class="btn btn-primary uInfo" name="submit" value="Save">
-                      <div id="messageUpdate"></div>
+                      <div id="messageUpdate-{{resource.id}}"></div>
                     </fieldset>
                   </form>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" id="clean-in">Close</button>
-                  </div>
                 </div>
               </div>
             </div>
