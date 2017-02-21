@@ -20,11 +20,40 @@
         <td>{{resource.content_type}}</td>
         <td>{{resource.tag}}</td>
         <td>
-          <button type="button" class="btn btn-info">
-            <span class="glyphicon glyphicon-search"></span>
+          <button type="button" class="btn btn-danger delete_information">
+            <span class="glyphicon glyphicon-trash"></span>
           </button>
-          <a href="#" class="edit_row"><i class="material-icons edit">mode_edit</i></a>
-          <a href="#" class="delete_row"><i class="material-icons delete_resource">delete</i></a>
+
+          <button type="button" class="btn btn-primary btn pull-right update" data-toggle="modal" data-target="#exampleModalUpdate" data-whatever="@getbootstrap"><span class="glyphicon glyphicon-pencil"></span></button>
+          <div class="modal fade" id="exampleModalUpdate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <form id="update-info">
+                    <fieldset>
+                      <h4 class="modal-title" id="exampleModalLabel">Update!</h4>
+                      <label>
+                          Name
+                          <input type = "name" name ="resource[name]" class="clean-change">
+                        </label>
+                      <label>
+                          URL
+                          <input type ="url" name ="resource[url]" class="clean-change">
+                        </label>
+                      <input type="submit" class="btn btn-primary uInfo" name="submit" value="Save">
+                      <div id="messageUpdate"></div>
+                    </fieldset>
+                  </form>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="clean-in">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <a href="#" class="edit_row"><i class="material-icons edit">mode_edit</i></a>
+          <a href="#" class="delete_row"><i class="material-icons delete_resource">delete</i></a> -->
       </td>
       </tr>
       {{/each}}

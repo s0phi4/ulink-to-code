@@ -38,13 +38,16 @@ const onUpdateLink = function (event) {
    let data = getFormFields(event.target);
    api_link.updateLink(data)
    .then(ui_link.success)
+   .then(() => {
+     $("#messageUpdate").text("Name and URL updated!");
+   })
    .catch(ui_link.failure);
 };
 
 const onDeleteLink = function(event){
   event.preventDefault();
   let data = getFormFields(event.target);
-  api_link.deleteLink(data)
+  api_link.deleteLink(data.resource.id)
   .then(ui_link.success)
   .catch(ui_link.failure);
 };
@@ -52,11 +55,8 @@ const onDeleteLink = function(event){
 const linkHandlers = function () {
 $('.see_links').on('click', onGetLinks);
 $('#javascript').on('submit', onCreateLink);
-$('.save-ruby').on('click', onCreateLink);
-$('.save-html').on('click', onCreateLink);
-$('.save-css').on('click', onCreateLink);
-$('.edit').on('click', onUpdateLink);
-$('.delete_row').on('click', onDeleteLink);
+$('.update-info').on('submit', onUpdateLink);
+$('.resourcesTable').on('click','.delete_information', onDeleteLink);
 
 };
 module.exports = {
