@@ -43,6 +43,7 @@ const successSignOut = () => {
       $('.pass').hide();
       $('.sign-out').hide();
       $('.home-page').show();
+      $('.top').show();
       $('.bottom-page').show();
 };
 
@@ -51,6 +52,7 @@ const failureSignOut = () => {
       $('.pass').hide();
       $('.sign-out').hide();
       $('.home-page').show();
+      $('.top').show();
       $('.bottom-page').show();
 
 

@@ -56,7 +56,7 @@ $('.save-ruby').on('click', onCreateLink);
 $('.save-html').on('click', onCreateLink);
 $('.save-css').on('click', onCreateLink);
 $('.edit').on('click', onUpdateLink);
-$('.delete').on('click', onDeleteLink);
+$('.delete_row').on('click', onDeleteLink);
 
 };
 module.exports = {
