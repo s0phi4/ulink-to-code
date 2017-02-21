@@ -19,8 +19,10 @@
         <td contenteditable="true">{{resource.url}}</td>
         <td>{{resource.content_type}}</td>
         <td>{{resource.tag}}</td>
-        <td><i class="material-icons edit">mode_edit</i>
-        <i class="material-icons delete">delete</i></td>
+        <td>
+          <a href="#" class="edit_row"><i class="material-icons edit">mode_edit</i></a>
+          <a href="#" class="delete_row"><i class="material-icons delete_resource">delete</i></a>
+      </td>
       </tr>
       {{/each}}
     </tbody>

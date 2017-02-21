@@ -9,8 +9,7 @@
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption|PT+Serif" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -76,71 +75,71 @@
       </div>
     </div>
   </div>
-<!--Home buttons end  -->
+  <!--Home buttons end  -->
 
 
-<!--Buttons to change password and sign out -->
-<div class="outChangeButtons">
-  <button type="button" class="btn btn-danger btn pull-right sign-out">Sign Out</button>
-  <button type="button" class="btn btn-primary btn pull-right pass" data-toggle="modal" data-target="#exampleModalChange" data-whatever="@getbootstrap">Change Password</button>
-  <!--Modal Form to change password -->
-      <div class="modal fade" id="exampleModalChange" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <form id="change-password">
-                <fieldset>
-                  <h4 class="modal-title" id="exampleModalLabel">Change Password!</h4>
-                  <label>
+  <!--Buttons to change password and sign out -->
+  <div class="outChangeButtons">
+    <button type="button" class="btn btn-danger btn pull-right sign-out">Sign Out</button>
+    <button type="button" class="btn btn-primary btn pull-right pass" data-toggle="modal" data-target="#exampleModalChange" data-whatever="@getbootstrap">Change Password</button>
+    <!--Modal Form to change password -->
+    <div class="modal fade" id="exampleModalChange" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <form id="change-password">
+              <fieldset>
+                <h4 class="modal-title" id="exampleModalLabel">Change Password!</h4>
+                <label>
                     Current Password
                     <input type = "password" name ="passwords[old]" class="clean-change">
                   </label>
-                  <label>
+                <label>
                     New Password
                     <input type ="password" name ="passwords[new]" class="clean-change">
                   </label>
-                  <input type="submit" class="btn btn-primary cpd" name="submit" value="Change Password!">
-                  <div id = "messagePass"></div>
-                </fieldset>
-              </form>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal" id="clean-in">Close</button>
-            </div>
+                <input type="submit" class="btn btn-primary cpd" name="submit" value="Change Password!">
+                <div id="messagePass"></div>
+              </fieldset>
+            </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" id="clean-in">Close</button>
             </div>
           </div>
         </div>
       </div>
-</div>
-<!-- Buttons change and out end -->
+    </div>
+  </div>
+  <!-- Buttons change and out end -->
 
-<!-- Popovers to save resources-->
+  <!-- Popovers to save resources-->
   <div class="container_popovers">
     <div class="row">
       <div class="col-xs-3">
         <!-- <a href="#" class="btn btn-large btn-primary button_home js" rel="popover" data-content= ' -->
         <form id="javascript">
-              <fieldset>
-                <label>
+          <fieldset>
+            <label>
                   Name
                   <input type = "text" name ="resource[name]">
                 </label>
-                <label>
+            <label>
                   URL
                   <input type ="url" name ="resource[url]">
-                </label>
-                <label>
+            </label>
+            <label>
                   Tag
                   <input type = "text" name ="resource[tag]">
-                </label>
-                <label>
+            </label>
+            <label>
                   Content-type
-                  <input type ="contentType" name ="resource[content_type]">
-                </label>
-                <input type="submit" class="btn btn-info save save-js" name="submit2" value="Save">
-              </fieldset>
-            </form>
-            <!-- data-placement="bottom" data-original-title="Save your JS links!">JS</a> -->
+                  <input type = "content_type" name ="resource[content_type]">
+            </label>
+            <input type="submit" class="btn btn-info save save-js" name="submit2" value="Save">
+          </fieldset>
+        </form>
+        <!-- data-placement="bottom" data-original-title="Save your JS links!">JS</a> -->
       </div>
 
       <div class="col-xs-3">
@@ -207,12 +206,12 @@
       </div>
     </div>
     <!--button to see resources  -->
-        <div class="col-md-12 text-center go_to_data">
-          <button type="button" class="btn btn-primary see_links">See your resources!</button>
-        </div>
+    <div class="col-md-12 text-center go_to_data">
+      <button type="button" class="btn btn-primary see_links">See your resources!</button>
+    </div>
     <!--Button to see resources end  -->
   </div>
-<!--Popovers end  -->
+  <!--Popovers end  -->
 
 
   <!--page bottom begins  -->
@@ -220,21 +219,21 @@
     <h1>ULink to Code</h1>
     <h3>Learn</h3>
     <h3>Save & Organize</h3>
-  <footer>
-    <p>
-      <a href="https://github.com/yenpraja610" target='_blank'>
-        <h4>See more projects here!</h4>
-      </a>
-      <a href="https://linkedin.com/in/yeniferprajapati" target='_blank'>
-        <h4>Learn more about me!</h4>
-      </a>
-    </p>
-    <p class="creator">Copyright © Yenifer A. Prajapati. 2017 All Rights Reserved</p>
-  </footer>
-</div>
+    <footer>
+      <p>
+        <a href="https://github.com/yenpraja610" target='_blank'>
+          <h4>See more projects here!</h4>
+        </a>
+        <a href="https://linkedin.com/in/yeniferprajapati" target='_blank'>
+          <h4>Learn more about me!</h4>
+        </a>
+      </p>
+      <p class="creator">Copyright © Yenifer A. Prajapati. 2017 All Rights Reserved</p>
+    </footer>
+  </div>
 
-<!--Table with links  -->
-<div class="resourcesTable"></div>
+  <!--Table with links  -->
+  <div class="resourcesTable"></div>
 
 </body>
 
