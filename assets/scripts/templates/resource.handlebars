@@ -4,6 +4,7 @@
 <table class="table">
   <thead>
       <tr>
+        <th class= "hide-id">ID</th>
         <th>Name</th>
         <th>URL</th>
         <th>Content-Type</th>
@@ -13,7 +14,7 @@
     <tbody>
       {{#each resources as |resource|}}
       <tr>
-        <!-- <td data-id="{{resource.id}}"</td> -->
+        <td data-id="{{resource.id}}" class= "hide-id"</td>
         <td contenteditable="true">{{resource.name}}</td>
         <td contenteditable="true">{{resource.url}}</td>
         <td>{{resource.content_type}}</td>

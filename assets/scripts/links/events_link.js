@@ -42,10 +42,10 @@ const onUpdateLink = function (event) {
    event.preventDefault();
    let data = getFormFields(event.target);
    let id = $(event.target).data('id');
+   $(`#exampleModalUpdate-${id}`).modal('hide');
    console.log(id);
       api_link.updateLink(data, id)
    .then(ui_link.success)
-   .then($('#exampleModalUpdate').modal('hide'))
    .then(onGetLinks)
    .catch(ui_link.failure);
 };
