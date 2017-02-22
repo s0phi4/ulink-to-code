@@ -42,12 +42,27 @@ const onUpdateLink = function (event) {
    event.preventDefault();
    let data = getFormFields(event.target);
    let id = $(event.target).data('id');
-   $(`#exampleModalUpdate-${id}`).modal('hide');
+  //  let formModal = $(`#exampleModalUpdate-${id}`);
+  //  formModal.modal('hide');
+    api_link.updateLink(data, id)
+      .then(() => {
+        ui_link.onUpdateSuccess(id);
+      } )
+      .then(onGetLinks)
+      // .then(() => { return formModal.modal('hide'); })
+      /* something to close the modal */
+      .catch(ui_link.failure);
+  //  $(`#exampleModalUpdate-${id}`).on('hidden.bs.modal', function(){
+  //    api_link.updateLink(data, id)
+  //    .then(ui_link.success)
+  //    .then(onGetLinks)
+  //    .catch(ui_link.failure);
+  //  });
    console.log(id);
-      api_link.updateLink(data, id)
-   .then(ui_link.success)
-   .then(onGetLinks)
-   .catch(ui_link.failure);
+  //     api_link.updateLink(data, id)
+  //  .then(ui_link.success)
+  //  .then(onGetLinks)
+  //  .catch(ui_link.failure);
 };
 
 const onDeleteLink = function(event){

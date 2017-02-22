@@ -7,6 +7,12 @@ const config = require('../config');
 const success = (data) => {
   console.log(data);
 };
+
+const onUpdateSuccess = (id) => {
+
+  $(`#exampleModalUpdate-${id}`).modal("hide");
+};
+
 const failure = (error) => {
   console.log(error);
 };
@@ -31,6 +37,7 @@ $('.resourcesTable').html(resourceTemplate({
 
 module.exports = {
   success,
+  onUpdateSuccess,
   failure,
   successChange,
   // successSave,
