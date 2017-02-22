@@ -60,18 +60,12 @@ const onDeleteLink = function(event){
   .catch(ui_link.failure);
 };
 
-const onClean = function(){
-  $('.clean-change').val('');
-  $('#messageUpdate').text('');
-
-};
 
 const linkHandlers = function () {
 $('.see_links').on('click', onGetLinks);
 $('#linksForm').on('submit', onCreateLink);
 $('.resourcesTable').on('submit','.update-info',onUpdateLink);
 $('.resourcesTable').on('click','.delete_information', onDeleteLink);
-$("#clean-in").on('click', onClean);
 
 };
 module.exports = {

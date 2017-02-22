@@ -20,7 +20,7 @@ const successSignIn = (data) => {
     $('#sign-up').val('');
     $('.clean-signin').val('');
     $('#exampleModalIn').modal('hide');
-    $('.container_popovers').show();
+    $('.container_for_info').show();
     $('.go_to_data').show();
     $('.pass').show();
     $('.top').hide();
@@ -40,7 +40,7 @@ $('#messagePass').text('Great! Change is successful!');
 };
 
 const successSignOut = () => {
-      $('.container_popovers').hide();
+      $('.container_for_info').hide();
       $('.go_to_data').hide();
       $('.pass').hide();
       $('.sign-out').hide();
@@ -51,7 +51,7 @@ const successSignOut = () => {
 };
 
 const failureSignOut = () => {
-      $('.container_popovers').hide();
+      $('.container_for_info').hide();
       $('.go_to_data').hide();
       $('.pass').hide();
       $('.sign-out').hide();

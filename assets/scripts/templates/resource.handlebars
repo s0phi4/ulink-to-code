@@ -1,7 +1,7 @@
 <h1 class="title">UCode-My Online Resources!</h1>
 
 
-<table class="table">
+<table class="table coding-resources">
   <thead>
       <tr>
         <th class= "hide-id">ID</th>
@@ -24,6 +24,7 @@
             <span data-id="{{resource.id}}" class="glyphicon glyphicon-trash"></span>
           </button>
 
+
           <button type="button"
             class="btn btn-primary btn pull-right update"
             data-toggle="modal"
@@ -40,12 +41,12 @@
                       <h4 class="modal-title" id="exampleModalLabel-{{resource.id}}">Update!</h4>
                       <label>
                           Name
-                          <input type = "name" name ="resource[name]" class="clean-change">
-                        </label>
+                          <input type = "name" name ="resource[name]" required>
+                      </label>
                       <label>
                           URL
-                          <input type ="url" name ="resource[url]" class="clean-change">
-                        </label>
+                          <input type ="url" name ="resource[url]" required>
+                      </label>
                       <input type="submit" class="btn btn-primary uInfo" name="submit" value="Save">
                       <div id="messageUpdate-{{resource.id}}"></div>
                     </fieldset>
@@ -54,9 +55,6 @@
               </div>
             </div>
           </div>
-
-          <!-- <a href="#" class="edit_row"><i class="material-icons edit">mode_edit</i></a>
-          <a href="#" class="delete_row"><i class="material-icons delete_resource">delete</i></a> -->
       </td>
       </tr>
       {{/each}}
