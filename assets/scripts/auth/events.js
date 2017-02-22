@@ -63,9 +63,9 @@ const addHandlers = () => {
   $('.sign-out').hide();
   $('#sign-up').on('submit', onSignUp);
   $('#sign-in').on('submit', onSignIn);
-  $('#change-password').on('submit',onChangePassword);
-  $('.sign-out').on('click',onSignOut);
-  $("#clean-in").on('click', onClean);
+  $('#change-password').on('submit', onChangePassword);
+  $('.sign-out').on('click', onSignOut);
+  $('#clean-in').on('click', onClean);
   $('#clean-signup').on ('click', onCleanSignup);
 
 };

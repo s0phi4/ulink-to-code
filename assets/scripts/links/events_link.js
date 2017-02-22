@@ -11,7 +11,7 @@ const onGetLinks = function (event) {
   // $('.container_popovers').hide();
   $('.resourcesTable').show();
   api_link.getLinks()
-  .then(function(resources) {
+  .then(function (resources) {
     ui_link.showUserResources(resources);
   })
   .catch(ui_link.failure);
@@ -43,7 +43,7 @@ const onUpdateLink = function (event) {
    let data = getFormFields(event.target);
    let id = $(event.target).data('id');
    console.log(id);
-   api_link.updateLink(data,id)
+      api_link.updateLink(data, id)
    .then(ui_link.success)
    .then($('#exampleModalUpdate').modal('hide'))
    .then(onGetLinks)

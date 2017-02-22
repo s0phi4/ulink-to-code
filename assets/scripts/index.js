@@ -10,9 +10,5 @@ $(() => {
   setAPIOrigin(location, config);
   authEvents.addHandlers();
   resourceEvents.linkHandlers();
-  $('a[rel=popover]').popover({
-    html: 'true',
-placement: 'bottom'
-});
 
 });

@@ -42,6 +42,7 @@ const successSignOut = () => {
       $('.container_popovers').hide();
       $('.pass').hide();
       $('.sign-out').hide();
+      $('.resourcesTable').hide();
       $('.home-page').show();
       $('.top').show();
       $('.bottom-page').show();
@@ -51,6 +52,7 @@ const failureSignOut = () => {
       $('.container_popovers').hide();
       $('.pass').hide();
       $('.sign-out').hide();
+      $('.resourcesTable').hide();
       $('.home-page').show();
       $('.top').show();
       $('.bottom-page').show();
