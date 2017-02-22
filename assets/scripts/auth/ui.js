@@ -21,6 +21,7 @@ const successSignIn = (data) => {
     $('.clean-signin').val('');
     $('#exampleModalIn').modal('hide');
     $('.container_popovers').show();
+    $('.go_to_data').show();
     $('.pass').show();
     $('.top').hide();
     $('.bottom-page').hide();
@@ -40,6 +41,7 @@ $('#messagePass').text('Great! Change is successful!');
 
 const successSignOut = () => {
       $('.container_popovers').hide();
+      $('.go_to_data').hide();
       $('.pass').hide();
       $('.sign-out').hide();
       $('.resourcesTable').hide();
@@ -50,6 +52,7 @@ const successSignOut = () => {
 
 const failureSignOut = () => {
       $('.container_popovers').hide();
+      $('.go_to_data').hide();
       $('.pass').hide();
       $('.sign-out').hide();
       $('.resourcesTable').hide();

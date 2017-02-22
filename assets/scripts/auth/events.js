@@ -59,6 +59,7 @@ const addHandlers = () => {
   $('#sign-up').show();
   $('#sign-in').show();
   $('.container_popovers').hide();
+  $('.go_to_data').hide();
   $('.pass').hide();
   $('.sign-out').hide();
   $('#sign-up').on('submit', onSignUp);

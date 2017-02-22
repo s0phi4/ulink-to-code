@@ -68,7 +68,7 @@ const onClean = function(){
 
 const linkHandlers = function () {
 $('.see_links').on('click', onGetLinks);
-$('#javascript').on('submit', onCreateLink);
+$('#linksForm').on('submit', onCreateLink);
 $('.resourcesTable').on('submit','.update-info',onUpdateLink);
 $('.resourcesTable').on('click','.delete_information', onDeleteLink);
 $("#clean-in").on('click', onClean);
