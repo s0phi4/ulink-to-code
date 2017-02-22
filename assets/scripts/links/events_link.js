@@ -8,7 +8,7 @@ const onGetLinks = function (event) {
   if (event) {
     event.preventDefault();
   }
-  $('.container_popovers').hide();
+  // $('.container_popovers').hide();
   $('.resourcesTable').show();
   api_link.getLinks()
   .then(function(resources) {
@@ -26,6 +26,7 @@ const onCreateLink = function (event) {
 
   api_link.createLink(data)
  .then(ui_link.success)
+ .then(onGetLinks)
  .catch(ui_link.failure);
  };
 
@@ -40,14 +41,12 @@ const onUpdateLink = function (event) {
   console.log("HELLO");
    event.preventDefault();
    let data = getFormFields(event.target);
-   let id = event.target.getAttribute('data-id');
+   let id = $(event.target).data('id');
    console.log(id);
    api_link.updateLink(data,id)
    .then(ui_link.success)
+   .then($('#exampleModalUpdate').modal('hide'))
    .then(onGetLinks)
-  //    $("#messageUpdate").text("Name and URL updated!");
-  //  })
-
    .catch(ui_link.failure);
 };
 

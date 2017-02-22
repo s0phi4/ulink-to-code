@@ -4,7 +4,6 @@
 <table class="table">
   <thead>
       <tr>
-        <th>ID</th>
         <th>Name</th>
         <th>URL</th>
         <th>Content-Type</th>
@@ -14,7 +13,7 @@
     <tbody>
       {{#each resources as |resource|}}
       <tr>
-        <td data-id="{{resource.id}}"</td>
+        <!-- <td data-id="{{resource.id}}"</td> -->
         <td contenteditable="true">{{resource.name}}</td>
         <td contenteditable="true">{{resource.url}}</td>
         <td>{{resource.content_type}}</td>
@@ -31,7 +30,7 @@
             data-whatever="@getbootstrap">
             <span data-id="{{resource.id}}" class="glyphicon glyphicon-pencil"></span>
           </button>
-          <div class="modal fade" id="exampleModalUpdate-{{resource.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+          <div class="modal fade updateRowTable" id="exampleModalUpdate-{{resource.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
             <div class="modal-dialog" role="document">
               <div class="modal-content saveNewLink">
                 <div class="modal-header">
