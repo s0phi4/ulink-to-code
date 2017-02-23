@@ -2,17 +2,34 @@
 
 # ULink to Code
 
-A full stack web app for coders of all times to save their coding online resources!
+An app that allows you to organize your coding learning resources (Youtube videos, articles)
+I came up with this idea because I felt overwhelmed with all the links shared and I wanted to have a way to save them under categories.
 
-## Process
+## Links to Repos and wireframe
+[API Repo](https://github.com/yenpraja610/yenproject)
+[Front end repo](https://github.com/yenpraja610/yenproject_front)
+[ULink to Code](https://yenpraja610.github.io/yenproject_front/)
+[Wireframe](http://i1172.photobucket.com/albums/r579/yenlumiere610/Mobile%20Uploads/9AF1E1AE-8A16-412B-B296-BE07E5959CCB_zpscbzigqvn.jpg)
 
+## Userstories
+- As a user I want to login and see three categories under which I can save links of resources I use to learn code.
+- As a user I want to save a learning resource with a name , url, tag, and content-type to have an organized list  of resources I use to learn code.
+- As a user I want to update the resources I have saved. I want to keep my links up to date and rename them.
 
--   HTML
--   Handlebars
+## Resources used
+
+- Handlebars
+- Bootstrap
+- javascript
 
 
 ## Struggles
-  Handlebar Table
+
+- Bootstrap: Modals.
+- Lack of a more methodical process.
 
 
 ## How to improve
+- In order to improve the process I need to build checklists that allow me to have an organized process when writing code.(Ex: Create, element, create click handler, console.log to test, etc)
+- Use a form in a popover that indicates the tag name, so there is a hidden tag field in the form and have the info added in the table.
+- Filter links by tag name.
