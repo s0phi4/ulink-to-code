@@ -8,7 +8,6 @@ const onGetLinks = function (event) {
   if (event) {
     event.preventDefault();
   }
-  // $('.container_popovers').hide();
   $('.resourcesTable').show();
   api_link.getLinks()
   .then(function (resources) {
@@ -20,22 +19,13 @@ const onGetLinks = function (event) {
 
 const onCreateLink = function (event) {
   event.preventDefault();
-
   let data = getFormFields(event.target);
-
-
   api_link.createLink(data)
- .then(ui_link.success)
+ .then(ui_link.successSave)
  .then(onGetLinks)
  .catch(ui_link.failure);
  };
 
-// const onShowLink = function (event) {
-//   event.preventDefault();
-//   api_link.showLink()
-//   .then(ui_link.success)
-//   .catch(ui_link.failure);
-// };
 
 const onUpdateLink = function (event) {
    event.preventDefault();

@@ -17,9 +17,10 @@ const failure = (error) => {
   console.log(error);
 };
 
-// const successSave = () => {
-//   $('.save').popover('hide');
-// };
+const successSave = (data) => {
+  config.resource = data.resource;
+  $('.clean-info').val('');
+};
 const successChange = (data) => {
     config.resource = data.resource;
 
@@ -40,6 +41,6 @@ module.exports = {
   onUpdateSuccess,
   failure,
   successChange,
-  // successSave,
+  successSave,
   showUserResources
 };
