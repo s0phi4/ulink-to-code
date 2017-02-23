@@ -22,7 +22,7 @@ const onCreateLink = function (event) {
   event.preventDefault();
 
   let data = getFormFields(event.target);
-  console.log(data);
+
 
   api_link.createLink(data)
  .then(ui_link.success)
@@ -38,37 +38,20 @@ const onCreateLink = function (event) {
 // };
 
 const onUpdateLink = function (event) {
-  console.log("HELLO");
    event.preventDefault();
    let data = getFormFields(event.target);
    let id = $(event.target).data('id');
-  //  let formModal = $(`#exampleModalUpdate-${id}`);
-  //  formModal.modal('hide');
     api_link.updateLink(data, id)
       .then(() => {
         ui_link.onUpdateSuccess(id);
       } )
       .then(onGetLinks)
-      // .then(() => { return formModal.modal('hide'); })
-      /* something to close the modal */
       .catch(ui_link.failure);
-  //  $(`#exampleModalUpdate-${id}`).on('hidden.bs.modal', function(){
-  //    api_link.updateLink(data, id)
-  //    .then(ui_link.success)
-  //    .then(onGetLinks)
-  //    .catch(ui_link.failure);
-  //  });
-   console.log(id);
-  //     api_link.updateLink(data, id)
-  //  .then(ui_link.success)
-  //  .then(onGetLinks)
-  //  .catch(ui_link.failure);
 };
 
 const onDeleteLink = function(event){
   event.preventDefault();
   let id = $(event.target).data('id');
-  console.log(id);
   api_link.deleteLink(id)
   .then(ui_link.success)
   .then(onGetLinks)
@@ -85,4 +68,5 @@ $('.resourcesTable').on('click','.delete_information', onDeleteLink);
 };
 module.exports = {
   linkHandlers,
+  onGetLinks
 };

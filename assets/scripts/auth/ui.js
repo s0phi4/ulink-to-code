@@ -1,5 +1,6 @@
  'use strict';
  const config = require('../config');
+ const linkEvents = require('../links/events_link.js');
 
 
 const successSignUp = (data) => {
@@ -7,11 +8,9 @@ const successSignUp = (data) => {
   $('#exampleModalUp').modal('hide');
   $('.signup-clean').val('');
   $('.message').text('');
-  console.log(data);
 };
 
-const failureSignUp = (data) => {
-  console.log(data);
+const failureSignUp = () => {
   $('.message').text('Nope, you used this account already, try with a different account!');
 };
 
@@ -27,6 +26,7 @@ const successSignIn = (data) => {
     $('.bottom-page').hide();
     $('#change-password').show();
     $('.sign-out').show();
+    linkEvents.onGetLinks();
   };
 
 const failureSignIn = (error) => {
