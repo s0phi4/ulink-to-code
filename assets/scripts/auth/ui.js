@@ -11,6 +11,7 @@ const successSignUp = (data) => {
 };
 
 const failureSignUp = () => {
+  $('.signup-clean').val('');
   $('.message').text('Nope, you used this account already, try with a different account!');
 };
 
@@ -48,6 +49,7 @@ const successSignOut = () => {
       $('.home-page').show();
       $('.top').show();
       $('.bottom-page').show();
+      $('.message').text('');
 };
 
 const failureSignOut = () => {
@@ -59,6 +61,7 @@ const failureSignOut = () => {
       $('.home-page').show();
       $('.top').show();
       $('.bottom-page').show();
+      $('.message').text('');
 
 
 };

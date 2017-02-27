@@ -6,10 +6,10 @@ An app that allows you to organize your coding learning resources (Youtube video
 I came up with this idea because I felt overwhelmed with all the links shared and I wanted to have a way to save them under categories.
 
 ## Links to Repos and wireframe
-[API Repo](https://github.com/yenpraja610/yenproject)
-[Front end repo](https://github.com/yenpraja610/yenproject_front)
-[ULink to Code](https://yenpraja610.github.io/yenproject_front/)
-[Wireframe](http://i1172.photobucket.com/albums/r579/yenlumiere610/Mobile%20Uploads/9AF1E1AE-8A16-412B-B296-BE07E5959CCB_zpscbzigqvn.jpg)
+- [API Repo](https://github.com/yenpraja610/yenproject)
+- [Front end repo](https://github.com/yenpraja610/yenproject_front)
+- [ULink to Code](https://yenpraja610.github.io/yenproject_front/)
+- [Wireframe](http://i1172.photobucket.com/albums/r579/yenlumiere610/Mobile%20Uploads/9AF1E1AE-8A16-412B-B296-BE07E5959CCB_zpscbzigqvn.jpg)
 
 ## Userstories
 - As a user I want to login and see three categories under which I can save links of resources I use to learn code.
