@@ -7,8 +7,7 @@ I came up with this idea because I felt overwhelmed with all the links shared an
 
 ## Links to Repos and wireframe
 - [API Repo](https://github.com/yenpraja610/yenproject)
-- [Front end repo](https://github.com/yenpraja610/yenproject_front)
-- [ULink to Code](https://yenpraja610.github.io/yenproject_front/)
+- [ULink to Code](http://yenpraja.codes/ulink-to-code/)
 - [Wireframe](http://i1172.photobucket.com/albums/r579/yenlumiere610/Mobile%20Uploads/9AF1E1AE-8A16-412B-B296-BE07E5959CCB_zpscbzigqvn.jpg)
 
 ## Userstories
